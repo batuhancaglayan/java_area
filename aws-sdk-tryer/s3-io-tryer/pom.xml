@@ -8,9 +8,7 @@
 		<artifactId>aws-sdk-tryer</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
-	<groupId>com.s3</groupId>
 	<artifactId>s3-io-tryer</artifactId>
-	<version>1.0.0</version>
 	<packaging>jar</packaging>
 	<name>s3-io-tryer</name>
 	<description>s3 upload download tryer</description>
