@@ -1,0 +1,9 @@
+/home/batuhanca/Downloads/criteria-search/criteria-lib/src/main/java/com/generic/criteria/lib/filter/GenericSearchFilter.java
+/home/batuhanca/Downloads/criteria-search/criteria-lib/src/main/java/com/generic/criteria/lib/filter/GenericPageSearchFilter.java
+/home/batuhanca/Downloads/criteria-search/criteria-lib/src/main/java/com/generic/criteria/lib/search/type/SearchOperator.java
+/home/batuhanca/Downloads/criteria-search/criteria-lib/src/main/java/com/generic/criteria/lib/model/SearchValue.java
+/home/batuhanca/Downloads/criteria-search/criteria-lib/src/main/java/com/generic/criteria/lib/model/PageResult.java
+/home/batuhanca/Downloads/criteria-search/criteria-lib/src/main/java/com/generic/criteria/lib/dao/SearchDao.java
+/home/batuhanca/Downloads/criteria-search/criteria-lib/src/main/java/com/generic/criteria/lib/SearchFilter.java
+/home/batuhanca/Downloads/criteria-search/criteria-lib/src/main/java/com/generic/criteria/lib/model/PageQuery.java
+/home/batuhanca/Downloads/criteria-search/criteria-lib/src/main/java/com/generic/criteria/lib/util/PredicateUtil.java

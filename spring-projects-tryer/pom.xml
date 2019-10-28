@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.spring.projects.tryer</groupId>
+	<artifactId>spring-projects-tryer</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<packaging>pom</packaging>
+	<name>spring-projects-tryer</name>
+	<description>spring projects tryer</description>
+
+	<properties>
+		<java.version>1.8</java.version>
+		<maven.compiler.source>${java.version}</maven.compiler.source>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<maven.compiler.target>${java.version}</maven.compiler.target>
+		<sping.boot.version>2.1.4.RELEASE</sping.boot.version>
+		<spring-cloud.version>Greenwich.M3</spring-cloud.version>
+	</properties>
+
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-dependencies</artifactId>
+				<version>${sping.boot.version}</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+
+			<dependency>
+				<groupId>org.springframework.cloud</groupId>
+				<artifactId>spring-cloud-dependencies</artifactId>
+				<version>${spring-cloud.version}</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
+		</plugins>
+	</build>
+	<modules>
+		<module>service-registry-client</module>
+		<module>registry-group-dispatcher</module>
+		<module>spring-garbage-tryer</module>
+		<module>zuul-tryer</module>
+		<module>feign-clienta-tryer</module>
+		<module>feign-clientb-tryer</module>
+		<module>criteria-search</module>
+		<module>jmxmp-lib</module>
+		<module>boot-docker-tryer</module>
+		<module>user-role-tryer</module>
+		<module>user-registration-system</module>
+		<module>fork-join-tryer</module>
+		<module>hystrix-tryer</module>
+		<module>immutable-thread-share</module>
+		<module>in-memory-cache-tryer</module>
+		<module>multithread-share-object</module>
+		<module>multithread-tryer</module>
+		<module>thread-interrupt-tryer</module>
+	</modules>
+</project>
