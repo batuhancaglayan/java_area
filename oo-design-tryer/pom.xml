@@ -14,6 +14,7 @@
 		<module>logistic-system-design</module>
 		<module>chess-game</module>
 		<module>vending-machine</module>
+		<module>shopping-system</module>
 	</modules>
 
 	<properties>
@@ -29,6 +30,13 @@
 				<groupId>junit</groupId>
 				<artifactId>junit</artifactId>
 				<version>4.4</version>
+				<scope>test</scope>
+			</dependency>
+
+			<dependency>
+				<groupId>org.mockito</groupId>
+				<artifactId>mockito-core</artifactId>
+				<version>2.10.0</version>
 				<scope>test</scope>
 			</dependency>
 
