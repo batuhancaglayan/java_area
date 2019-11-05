@@ -1,4 +1,0 @@
-com/socket/socket/server/SocketServerApplication.class
-com/socket/socket/server/config/AppConfig.class
-com/socket/socket/server/config/ThreadConfig.class
-com/socket/socket/server/handler/SocketHandler.class
