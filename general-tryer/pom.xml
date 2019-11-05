@@ -9,16 +9,41 @@
 	<packaging>pom</packaging>
 	<name>general-tryer</name>
 	<description>general trainig</description>
-	
+
 	<properties>
 		<java.version>1.8</java.version>
 		<maven.compiler.source>${java.version}</maven.compiler.source>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<maven.compiler.target>${java.version}</maven.compiler.target>
 	</properties>
-	
+
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>junit</groupId>
+				<artifactId>junit</artifactId>
+				<version>4.4</version>
+				<scope>test</scope>
+			</dependency>
+
+			<dependency>
+				<groupId>org.mockito</groupId>
+				<artifactId>mockito-core</artifactId>
+				<version>2.10.0</version>
+				<scope>test</scope>
+			</dependency>
+
+			<dependency>
+				<groupId>org.projectlombok</groupId>
+				<artifactId>lombok</artifactId>
+				<version>1.18.10</version>
+				<scope>provided</scope>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+
 	<modules>
-		<module>aspect-tryer</module>
+		 <module>aspect-tryer</module> 
 		<module>algorithm-tryer</module>
 		<module>consumer-producer-thread</module>
 		<module>custom-datastructure-implementation</module>
@@ -28,5 +53,6 @@
 		<module>object-creation-tryer</module>
 		<module>redis-cluster-client</module>
 		<module>socket-tryer</module>
+		<module>event-source</module>
 	</modules>
 </project>
