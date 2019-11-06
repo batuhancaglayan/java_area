@@ -48,11 +48,6 @@ public class UserRegisterTest {
 	@Autowired
 	private UserMapper userMapper;
 
-//	@Retention(RetentionPolicy.RUNTIME)
-//	@Target(ElementType.TYPE)
-//	@TestPropertySource(locations="classpath:test.properties")
-//	public @interface DefaultTestAnnotations { }
-
 	@Test
 	public void registerUserTest()
 			throws RegisterdUserAllreadyExistException, ServiceCallTimeOutException, NoValidUserIdentityException {
@@ -62,14 +57,14 @@ public class UserRegisterTest {
 
 		Mockito.when(this.identityService.isIdentitfNoValid(cu.getIdentityNo())).thenReturn(true);
 		Mockito.when(this.candidateUserRepository.saveAndFlush(Mockito.any(CandidateUserEntity.class))).thenReturn(cue);
-		Mockito.when(this.mailServiceUtil.sendActivationMail(cu.getEmail(), Mockito.anyLong())).thenReturn(true);
+		Mockito.when(this.mailServiceUtil.sendActivationMail(Mockito.anyString(), Mockito.anyLong())).thenReturn(true);
 		
 		CandidateUserModel cuSaved = this.userService.registerUser(cu);
 
 		verify(this.identityService, times(1)).isIdentitfNoValid(cu.getIdentityNo());
-		verify(this.mailServiceUtil, times(1)).sendActivationMail(cu.getEmail(), Mockito.any());
+		verify(this.mailServiceUtil, times(1)).sendActivationMail(Mockito.anyString(), Mockito.any());
 
 		assertNotNull(cuSaved);
-		assertThat(cuSaved, equalTo(cue));
+		assertThat(cuSaved.getIdentityNo(), equalTo(cue.getIdentityNo()));
 	}
 }

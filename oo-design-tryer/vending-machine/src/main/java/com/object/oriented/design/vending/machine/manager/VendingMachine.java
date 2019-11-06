@@ -34,7 +34,7 @@ public class VendingMachine {
 
 	@Getter
 	@Setter
-	Product selectedProduct;
+	Product selectedProduct = null;
 
 	{
 		this.stateMap = new HashMap<>();

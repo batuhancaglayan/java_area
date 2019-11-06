@@ -31,6 +31,7 @@ public class PressButtonState extends State {
 		Bucket bucket = new Bucket(this.vendingMachine.getSelectedProduct(),
 				CoinUtil.calculateChange(remaining, this.vendingMachine.getCoinStock()));
 		
+		this.vendingMachine.setSelectedProduct(null);
 		this.vendingMachine.resetMachine();
 		return bucket;
 	}
