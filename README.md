@@ -1,2 +1,2 @@
 # java_area
-personal trainer area
+java personal trainer area
