@@ -57,4 +57,43 @@
 			<scope>test</scope>
 		</dependency>
 	</dependencies>
+
+ 	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<configuration>
+					<argLine>
+						-javaagent:./thundra-agent-bootstrap-2.7.15.jar
+						-Dthundra.apiKey=
+						-Dthundra.agent.test.project.id=
+					<!-- 	-Dthundra.agent.debug.enable=true -->
+						-Dthundra.agent.report.rest.baseurl=https://collector.thundra.me/v1
+					</argLine>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-failsafe-plugin</artifactId>
+				<configuration>
+					<argLine>
+						-javaagent:./thundra-agent-bootstrap-2.7.15.jar
+						-Dthundra.apiKey=
+						-Dthundra.agent.test.project.id=
+					<!-- 	-Dthundra.agent.debug.enable=true -->
+						-Dthundra.agent.report.rest.baseurl=https://collector.thundra.me/v1
+					</argLine>
+				</configuration>
+				<executions>
+					<execution>
+						<goals>
+							<goal>integration-test</goal>
+							<goal>verify</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+	</build> 
 </project>
